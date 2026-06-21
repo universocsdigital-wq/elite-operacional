@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Operacional × DocFounder | Proposta de Parceria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #F4F2F0;
+    --surface: #F9F8F6;
+    --dark:    #1A2B24;
+    --mid:     #3D3833;
+    --muted:   #8C8480;
+    --border:  #E0D9CE;
+    --primary: #B68E5D;
+    --plt:     #EDE0CC;
+    --forest:  #285846;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--mid);
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+  }
+
+  /* CABEÇALHO */
+  .cover {
+    padding-bottom: 56px;
+    border-bottom: 2px solid var(--dark);
+    margin-bottom: 64px;
+  }
+  .cover-eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .cover-eyebrow span { width: 32px; height: 1px; background: var(--border); display: inline-block; }
+  .cover h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px; font-weight: 400; line-height: 1.1;
+    color: var(--dark); margin-bottom: 24px; letter-spacing: -0.5px;
+  }
+  .cover h1 em { font-style: italic; color: var(--primary); }
+  .cover-lead {
+    font-size: 18px; font-weight: 300; color: var(--mid);
+    max-width: 600px; line-height: 1.7; margin-bottom: 40px;
+  }
+  .cover-context {
+    display: grid; grid-template-columns: 1fr 1px 1fr;
+    gap: 32px; align-items: center;
+  }
+  .context-item { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .context-item strong { display: block; font-size: 14px; color: var(--dark); font-weight: 500; margin-bottom: 2px; }
+  .context-divider { background: var(--border); height: 40px; }
+
+  /* SEÇÕES */
+  .sec { margin-bottom: 64px; }
+  .sec-eyebrow {
+    font-size: 10px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .sec h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px; font-weight: 400; color: var(--dark);
+    margin-bottom: 20px; line-height: 1.2;
+  }
+  .sec p {
+    font-size: 15px; color: var(--mid); line-height: 1.75;
+    margin-bottom: 16px; max-width: 660px;
+  }
+  .sec p:last-child { margin-bottom: 0; }
+
+  /* BLOCO ESCURO */
+  .dark-block {
+    background: var(--dark); padding: 40px 48px; margin-bottom: 64px;
+  }
+  .dark-block-eyebrow {
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: #4A6058; margin-bottom: 16px;
+  }
+  .dark-block p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px; font-style: italic; color: #C8C0B6;
+    line-height: 1.65; max-width: 600px;
+  }
+  .dark-block p em { color: #B68E5D; font-style: normal; }
+
+  /* O QUE O OLF ENTREGA */
+  .olf-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+    border: 1px solid var(--border); margin-bottom: 24px;
+  }
+  .olf-item {
+    padding: 24px 28px; border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .olf-item:nth-child(even) { border-right: none; }
+  .olf-item:nth-last-child(-n+2) { border-bottom: none; }
+  .olf-module {
+    font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--primary); margin-bottom: 6px;
+  }
+  .olf-title { font-size: 14px; font-weight: 500; color: var(--dark); line-height: 1.3; }
+
+  /* O QUE A IMPLEMENTAÇÃO ADICIONA */
+  .impl-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .impl-item {
+    display: grid; grid-template-columns: 80px 1fr; gap: 24px;
+    align-items: start; padding: 24px 0; border-bottom: 1px solid var(--border);
+  }
+  .impl-item:first-child { padding-top: 0; }
+  .impl-n {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px; color: var(--border); line-height: 1; padding-top: 4px;
+  }
+  .impl-content {}
+  .impl-title { font-size: 15px; font-weight: 500; color: var(--dark); margin-bottom: 6px; }
+  .impl-desc { font-size: 14px; color: var(--mid); line-height: 1.6; }
+
+  /* COMO SE ENCAIXA */
+  .encaixe-wrap { display: grid; grid-template-columns: 1fr 40px 1fr; gap: 24px; align-items: stretch; margin-top: 24px; }
+  .encaixe-bloco {
+    border: 1px solid var(--border); padding: 28px 32px; background: var(--surface);
+  }
+  .encaixe-bloco.highlight {
+    border-color: var(--primary); background: var(--plt);
+  }
+  .encaixe-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  .encaixe-bloco.highlight .encaixe-label { color: var(--primary); }
+  .encaixe-title { font-size: 15px; font-weight: 500; color: var(--dark); margin-bottom: 12px; }
+  .encaixe-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .encaixe-list li { font-size: 13px; color: var(--mid); padding-left: 14px; position: relative; line-height: 1.4; }
+  .encaixe-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 1px; background: var(--border); }
+  .encaixe-bloco.highlight .encaixe-list li::before { background: var(--primary); }
+  .encaixe-arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--border); font-size: 20px;
+  }
+
+  /* O QUE A CLÍNICA GANHA */
+  .ganhos-wrap { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--dark); border-left: 1px solid var(--border); margin-top: 24px; }
+  .ganho {
+    padding: 28px 28px 28px 0; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding-left: 28px;
+  }
+  .ganho-n {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px; color: var(--primary); line-height: 1; margin-bottom: 12px;
+  }
+  .ganho-title { font-size: 14px; font-weight: 500; color: var(--dark); margin-bottom: 6px; }
+  .ganho-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* NOTA FINAL */
+  .nota {
+    margin-top: 72px; padding-top: 32px; border-top: 1px solid var(--border);
+    display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end;
+  }
+  .nota-text { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 460px; }
+  .nota-assinatura { text-align: right; }
+  .nota-nome { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); margin-bottom: 4px; }
+  .nota-cargo { font-size: 12px; color: var(--muted); }
+  .nota-data { font-size: 12px; color: var(--muted); margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<div class="cover">
+  <div class="cover-eyebrow"><span></span>Documento de parceria<span></span></div>
+  <h1>A camada que faz<br>o OLF <em>virar prática</em></h1>
+  <p class="cover-lead">O que a DocFounder construiu no OLF representa o melhor mapa que uma secretária pode ter. Este documento propõe a camada que transforma esse mapa em território habitado.</p>
+  <div class="cover-context">
+    <div class="context-item">
+      <strong>DocFounder</strong>
+      Diagnóstico, estratégia e educação da equipe
+    </div>
+    <div class="context-divider"></div>
+    <div class="context-item">
+      <strong>Elite Operacional</strong>
+      Desenvolvimento individual e consolidação comportamental
+    </div>
+  </div>
+</div>
+
+<!-- O QUE O OLF ENTREGA -->
+<div class="sec">
+  <div class="sec-eyebrow">Ponto de partida</div>
+  <h2>O que o OLF entrega às clínicas</h2>
+  <p>O OLF cobre, em sete módulos, tudo o que uma equipe de secretárias precisa saber para operar em uma clínica de alto ticket. Da recepção ao agendamento cirúrgico, do fechamento de orçamentos à gestão de agenda do médico.</p>
+  <div class="olf-grid">
+    <div class="olf-item">
+      <div class="olf-module">Módulo 1</div>
+      <div class="olf-title">Mentalidade e postura profissional</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Módulo 2</div>
+      <div class="olf-title">Recepção, telefonema e primeiro contato</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Módulo 3</div>
+      <div class="olf-title">Agendamento e gestão da agenda médica</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Módulo 4</div>
+      <div class="olf-title">Orçamentos, pacotes e fechamento</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Módulo 5</div>
+      <div class="olf-title">Contorno de objeções com o método A.P.V.C.</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Módulo 6</div>
+      <div class="olf-title">Procedimentos cirúrgicos e agendamento especializado</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Módulo 7</div>
+      <div class="olf-title">Certificação e posicionamento profissional</div>
+    </div>
+    <div class="olf-item">
+      <div class="olf-module">Formato</div>
+      <div class="olf-title">31 vídeo-aulas expositivas distribuídas nos 7 módulos</div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCO ESCURO: A LACUNA -->
+<div class="dark-block">
+  <div class="dark-block-eyebrow">O que acontece depois do curso</div>
+  <p>Vídeo ensina, mas vídeo não muda comportamento. Maria termina o Módulo 5 sabendo exatamente como conduzir o método A.P.V.C., e na segunda-feira, com a sala cheia e o paciente pressionando por desconto, ela volta ao padrão que <em>sempre funcionou para ela.</em> Não por falta de conhecimento — por ausência de prática supervisionada.</p>
+</div>
+
+<!-- O QUE A IMPLEMENTAÇÃO ADICIONA -->
+<div class="sec">
+  <div class="sec-eyebrow">A complementação</div>
+  <h2>O que sessões individuais entregam</h2>
+  <p>Sessões semanais de 30 a 45 minutos com cada secretária, dentro do período de consultoria ativa da DocFounder, transformam o conteúdo do OLF em rotina consolidada.</p>
+  <ul class="impl-list">
+    <li class="impl-item">
+      <div class="impl-n">01</div>
+      <div class="impl-content">
+        <div class="impl-title">Âncora do conteúdo na realidade da clínica</div>
+        <div class="impl-desc">Cada sessão parte de uma situação real que a secretária enfrentou na semana. O conteúdo do OLF deixa de ser teoria e passa a ter endereço, contexto e consequência visível.</div>
+      </div>
+    </li>
+    <li class="impl-item">
+      <div class="impl-n">02</div>
+      <div class="impl-content">
+        <div class="impl-title">Feedback individual antes que o padrão errado se consolide</div>
+        <div class="impl-desc">Comportamento que não recebe feedback se torna hábito em três semanas. O acompanhamento semanal corrige a rota antes que o padrão inadequado se instale como norma.</div>
+      </div>
+    </li>
+    <li class="impl-item">
+      <div class="impl-n">03</div>
+      <div class="impl-content">
+        <div class="impl-title">Diagnóstico de perfil de aprendizagem por colaboradora</div>
+        <div class="impl-desc">Cada pessoa absorve e aplica conhecimento de uma forma diferente. Identificar o perfil de aprendizagem de cada secretária permite calibrar a abordagem e acelerar a consolidação.</div>
+      </div>
+    </li>
+    <li class="impl-item">
+      <div class="impl-n">04</div>
+      <div class="impl-content">
+        <div class="impl-title">Progressão documentada para o médico acompanhar</div>
+        <div class="impl-desc">O médico recebe visibilidade real da evolução individual de cada profissional, com indicadores objetivos. Isso muda a conversa de "a equipe não melhora" para "essa colaboradora está nesta etapa específica."</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- COMO SE ENCAIXA -->
+<div class="sec">
+  <div class="sec-eyebrow">Integração com o modelo DocFounder</div>
+  <h2>Como entra no modelo que você já opera</h2>
+  <p>A DocFounder já trabalha com especialistas por área: comercial, processos, gestão. O desenvolvimento individual da equipe é a peça que faltava nesse ecossistema e que amplifica tudo que o OLF ensina.</p>
+  <div class="encaixe-wrap">
+    <div class="encaixe-bloco">
+      <div class="encaixe-label">DocFounder</div>
+      <div class="encaixe-title">O que já existe</div>
+      <ul class="encaixe-list">
+        <li>Diagnóstico completo da clínica</li>
+        <li>Plano estratégico de 7 dias</li>
+        <li>OLF: formação da equipe</li>
+        <li>Sistema Doutor no Controle</li>
+        <li>Cashflow e gestão financeira</li>
+        <li>Implementação fase a fase</li>
+      </ul>
+    </div>
+    <div class="encaixe-arrow">+</div>
+    <div class="encaixe-bloco highlight">
+      <div class="encaixe-label">Camada complementar</div>
+      <div class="encaixe-title">O que entra junto</div>
+      <ul class="encaixe-list">
+        <li>Sessões individuais semanais por secretária</li>
+        <li>Diagnóstico de perfil de aprendizagem</li>
+        <li>Consolidação do conteúdo OLF em prática</li>
+        <li>Feedback antes que o padrão errado vire hábito</li>
+        <li>Progressão documentada por colaboradora</li>
+        <li>Acompanhamento dentro do período de consultoria</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- O QUE A CLÍNICA GANHA -->
+<div class="sec">
+  <div class="sec-eyebrow">O resultado para as clínicas</div>
+  <h2>O que muda na ponta</h2>
+  <div class="ganhos-wrap">
+    <div class="ganho">
+      <div class="ganho-n">01</div>
+      <div class="ganho-title">O OLF não fica no vídeo</div>
+      <div class="ganho-desc">O conteúdo passa para o comportamento diário. A clínica colhe o retorno do investimento que fez no OLF.</div>
+    </div>
+    <div class="ganho">
+      <div class="ganho-n">02</div>
+      <div class="ganho-title">Médico fora do operacional de verdade</div>
+      <div class="ganho-desc">Equipe que não precisa do médico para cada decisão. A autonomia prometida no diagnóstico se torna realidade visível.</div>
+    </div>
+    <div class="ganho">
+      <div class="ganho-n">03</div>
+      <div class="ganho-title">Retenção de quem já foi treinado</div>
+      <div class="ganho-desc">Colaboradora que cresce dentro da clínica fica na clínica. O ciclo de substituição e retreinamento diminui.</div>
+    </div>
+  </div>
+</div>
+
+<!-- NOTA FINAL -->
+<div class="nota">
+  <div class="nota-text">
+    O modelo "faz junto" que a DocFounder consolidou é exatamente o que torna essa integração natural. Não é uma adição por fora da consultoria. É o mesmo princípio aplicado no nível individual de cada colaboradora, dentro do período em que a equipe da DocFounder já está presente na clínica.
+  </div>
+  <div class="nota-assinatura">
+    <div class="nota-nome">Elite Operacional</div>
+    <div class="nota-cargo">Lucyanne Cruz</div>
+    <div class="nota-data">Junho de 2026</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite Operacional — Esboço do Projeto</title>
+<title>Elite Operacional | Esboço do Projeto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,26 +11,27 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg:     #F7F4EE;
-    --surface: #FDFAF4;
-    --dark:   #1A1714;
-    --mid:    #3D3833;
-    --muted:  #8C8480;
-    --border: #DDD8D0;
-    --gold:   #B8921A;
-    --gold-light: #F5EDCF;
+    --bg:         #F4F2F0;
+    --surface:    #F9F8F6;
+    --dark:       #1A2B24;
+    --mid:        #3D3833;
+    --muted:      #8C8480;
+    --border:     #E0D9CE;
+    --primary:    #B68E5D;
+    --primary-lt: #EDE0CC;
+    --forest:     #285846;
   }
 
   body {
     font-family: 'Inter', -apple-system, sans-serif;
     background: var(--bg);
-    color: var(--dark);
+    color: var(--mid);
     line-height: 1.6;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ─── HEADER ─────────────────────────────────── */
+  /* HEADER */
   .header {
     background: var(--dark);
     padding: 72px 80px 56px;
@@ -40,62 +41,58 @@
     font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #5A5550;
+    color: #4A6058;
     margin-bottom: 28px;
   }
   .header h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: 72px;
+    font-size: 68px;
     font-weight: 400;
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
     line-height: 1;
-    color: #F7F4EE;
-    margin-bottom: 20px;
+    color: #F4F2F0;
+    margin-bottom: 18px;
   }
   .header-sub {
     font-size: 17px;
     font-weight: 300;
-    color: #6A6460;
-    max-width: 500px;
+    color: #6A7D75;
+    max-width: 480px;
     line-height: 1.6;
     margin-bottom: 52px;
   }
   .header-meta {
     display: flex;
     align-items: center;
-    gap: 0;
     padding-top: 32px;
-    border-top: 1px solid #2A2624;
+    border-top: 1px solid #243D34;
   }
   .header-meta-item {
     font-size: 13px;
-    color: #5A5550;
-    padding-right: 32px;
-    margin-right: 32px;
-    border-right: 1px solid #2A2624;
+    color: #5A6E67;
+    padding-right: 28px;
+    margin-right: 28px;
+    border-right: 1px solid #243D34;
   }
   .header-meta-item:last-child {
     border-right: none;
     margin-right: 0;
     padding-right: 0;
-    color: var(--gold);
+    color: var(--primary);
     font-weight: 500;
     font-size: 12px;
     letter-spacing: 1px;
   }
-  .header-meta-item strong {
-    color: #C9C4BF;
-    font-weight: 500;
-  }
+  .header-meta-item strong { color: #B0C0BA; font-weight: 500; }
 
-  /* ─── CONTAINER ──────────────────────────────── */
+  /* CONTAINER */
   .container {
     max-width: 1080px;
     margin: 0 auto;
     padding: 80px 80px 120px;
   }
 
-  /* ─── SECTION HEADER ─────────────────────────── */
+  /* SECTION */
   .section { margin-bottom: 88px; }
   .section-header {
     display: flex;
@@ -111,13 +108,9 @@
     color: var(--muted);
     white-space: nowrap;
   }
-  .section-rule {
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .section-rule { flex: 1; height: 1px; background: var(--border); }
 
-  /* ─── HIPÓTESE ───────────────────────────────── */
+  /* HIPÓTESE */
   .hypothesis {
     background: var(--dark);
     padding: 52px 64px;
@@ -128,609 +121,282 @@
     content: '\201C';
     font-family: 'DM Serif Display', serif;
     font-size: 280px;
-    color: rgba(184,146,26,0.08);
+    color: rgba(182,142,93,0.08);
     position: absolute;
-    top: -40px;
-    left: 32px;
+    top: -40px; left: 32px;
     line-height: 1;
     pointer-events: none;
   }
   .hypothesis-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 20px;
-    position: relative;
+    font-size: 11px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--primary);
+    margin-bottom: 20px; position: relative;
   }
   .hypothesis-text {
     font-family: 'DM Serif Display', serif;
-    font-size: 24px;
-    font-style: italic;
-    color: #E5E0D8;
-    line-height: 1.65;
-    max-width: 780px;
-    position: relative;
+    font-size: 23px; font-style: italic;
+    color: #DDD8D0; line-height: 1.65;
+    max-width: 780px; position: relative;
   }
 
-  /* ─── PROGRAMAS ──────────────────────────────── */
+  /* PROGRAMAS */
   .programs-wrap {
     display: grid;
     grid-template-columns: 1fr 56px 1fr;
     align-items: start;
   }
-  .program {}
   .program-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 14px;
+    font-size: 11px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
   }
   .program-title {
     font-family: 'DM Serif Display', serif;
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 10px;
+    font-size: 32px; font-weight: 400;
+    line-height: 1.15; margin-bottom: 10px; color: #1A2B24;
   }
   .program-ticket {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--gold);
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--border);
+    font-size: 14px; font-weight: 500; color: var(--primary);
+    margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border);
   }
-  .program-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-  }
+  .program-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
   .program-list li {
-    font-size: 14px;
-    color: var(--mid);
-    line-height: 1.5;
-    padding-left: 16px;
-    position: relative;
+    font-size: 14px; color: var(--mid); line-height: 1.5;
+    padding-left: 16px; position: relative;
   }
   .program-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 1px;
-    background: var(--border);
+    content: ''; position: absolute; left: 0; top: 10px;
+    width: 6px; height: 1px; background: var(--border);
   }
 
-  /* FLYWHEEL CENTER LINE */
+  /* FLYWHEEL */
   .flywheel-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 80px;
-    gap: 0;
-    position: relative;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: flex-start; padding-top: 78px; position: relative;
   }
   .flywheel-col::before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: var(--border);
-    transform: translateX(-50%);
+    content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 1px; background: var(--border); transform: translateX(-50%);
   }
   .flywheel-node {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    position: relative;
-    z-index: 1;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--bg); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--primary); position: relative; z-index: 1;
   }
   .flywheel-label {
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-top: 8px;
-    position: relative;
-    z-index: 1;
-    background: var(--bg);
-    padding: 0 4px;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    font-size: 9px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--primary);
+    margin-top: 8px; position: relative; z-index: 1;
+    background: var(--bg); padding: 0 4px;
+    writing-mode: vertical-rl; transform: rotate(180deg);
   }
 
-  /* ─── FRENTES ────────────────────────────────── */
-  .frentes-wrap {
-    display: flex;
-    flex-direction: column;
-  }
+  /* FRENTES */
+  .frentes-wrap { display: flex; flex-direction: column; }
   .frente {
-    display: grid;
-    grid-template-columns: 88px 1fr;
-    gap: 40px;
-    padding: 40px 0;
-    border-bottom: 1px solid var(--border);
-    align-items: start;
+    display: grid; grid-template-columns: 88px 1fr; gap: 40px;
+    padding: 40px 0; border-bottom: 1px solid var(--border); align-items: start;
   }
   .frente:first-child { padding-top: 0; }
   .frente-num {
     font-family: 'DM Serif Display', serif;
-    font-size: 56px;
-    color: var(--border);
-    line-height: 1;
-    padding-top: 6px;
+    font-size: 56px; color: var(--border); line-height: 1; padding-top: 6px;
   }
   .frente-status {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 10px;
   }
-  .frente-status.ativa    { color: #567A58; }
-  .frente-status.proposta { color: var(--gold); }
+  .frente-status.ativa    { color: var(--forest); }
+  .frente-status.proposta { color: var(--primary); }
   .frente-status.confirmada { color: #5A6A8A; }
   .frente-name {
     font-family: 'DM Serif Display', serif;
-    font-size: 26px;
-    font-weight: 400;
-    margin-bottom: 12px;
-    line-height: 1.2;
+    font-size: 26px; font-weight: 400; margin-bottom: 12px; line-height: 1.2;
+    color: #1A2B24;
   }
   .frente-desc {
-    font-size: 14px;
-    color: var(--mid);
-    line-height: 1.65;
-    margin-bottom: 20px;
-    max-width: 580px;
+    font-size: 14px; color: var(--mid); line-height: 1.65;
+    margin-bottom: 20px; max-width: 580px;
   }
-  .frente-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-  .frente-detail-item {
-    font-size: 13px;
-    color: var(--muted);
-  }
+  .frente-details { display: flex; flex-wrap: wrap; gap: 32px; }
+  .frente-detail-item { font-size: 13px; color: var(--muted); }
   .frente-detail-item strong {
-    color: var(--dark);
-    font-weight: 500;
-    display: block;
-    font-size: 12px;
-    margin-bottom: 2px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 10px;
+    color: #1A2B24; font-weight: 500; display: block;
+    font-size: 10px; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 1px;
   }
-  .olf-chips {
-    display: flex;
-    gap: 12px;
-    margin-top: 4px;
-    flex-wrap: wrap;
-  }
+  .olf-chips { display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
   .olf-chip {
-    font-size: 12px;
-    color: var(--gold);
-    padding: 5px 14px;
-    border: 1px solid #D4B06A;
-    background: var(--gold-light);
-    font-weight: 500;
+    font-size: 12px; color: var(--primary); padding: 5px 14px;
+    border: 1px solid #D4B06A; background: var(--primary-lt); font-weight: 500;
   }
 
-  /* ─── RECEITA ────────────────────────────────── */
-  .receita-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .camadas {
-    display: flex;
-    flex-direction: column;
-  }
+  /* RECEITA */
+  .receita-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .camadas { display: flex; flex-direction: column; }
   .camada {
-    display: grid;
-    grid-template-columns: 24px 1fr auto;
-    gap: 20px;
-    align-items: baseline;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--border);
+    display: grid; grid-template-columns: 24px 1fr auto; gap: 20px;
+    align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border);
   }
   .camada:first-child { padding-top: 0; }
   .camada-n {
     font-family: 'DM Serif Display', serif;
-    font-size: 18px;
-    color: var(--border);
-    line-height: 1;
+    font-size: 18px; color: var(--border); line-height: 1;
   }
-  .camada-name {
-    font-size: 14px;
-    color: var(--mid);
-  }
-  .camada-value {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--dark);
-    white-space: nowrap;
-    text-align: right;
-  }
-  .camada-value.gratuita {
-    color: var(--muted);
-    font-weight: 400;
-    font-style: italic;
-  }
+  .camada-name { font-size: 14px; color: var(--mid); }
+  .camada-value { font-size: 13px; font-weight: 500; color: #1A2B24; white-space: nowrap; text-align: right; }
+  .camada-value.gratuita { color: var(--muted); font-weight: 400; font-style: italic; }
   .principio-note {
-    margin-top: 28px;
-    font-size: 13px;
-    font-style: italic;
-    color: var(--muted);
-    line-height: 1.6;
-    padding-left: 16px;
-    border-left: 2px solid var(--border);
+    margin-top: 28px; font-size: 13px; font-style: italic;
+    color: var(--muted); line-height: 1.6; padding-left: 16px; border-left: 2px solid var(--border);
   }
 
-  /* Projeção */
+  /* PROJEÇÃO */
   .projecao-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
+    font-size: 11px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
   }
   .projecao-total {
     font-family: 'DM Serif Display', serif;
-    font-size: 58px;
-    font-weight: 400;
-    color: var(--dark);
-    line-height: 1;
-    margin-bottom: 8px;
+    font-size: 58px; font-weight: 400; color: #1A2B24; line-height: 1; margin-bottom: 8px;
   }
-  .projecao-periodo {
-    font-size: 13px;
-    color: var(--muted);
-    font-weight: 300;
-    margin-bottom: 40px;
-  }
-  .meses {
-    display: flex;
-    flex-direction: column;
-  }
+  .projecao-periodo { font-size: 13px; color: var(--muted); font-weight: 300; margin-bottom: 40px; }
+  .meses { display: flex; flex-direction: column; }
   .mes {
-    display: grid;
-    grid-template-columns: 44px 1fr 72px;
-    gap: 16px;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
+    display: grid; grid-template-columns: 44px 1fr 72px; gap: 16px;
+    align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border);
   }
   .mes:first-child { padding-top: 0; }
-  .mes-label {
-    font-size: 12px;
-    color: var(--muted);
-  }
-  .mes-track {
-    height: 1px;
-    background: var(--border);
-    position: relative;
-  }
-  .mes-fill {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    height: 3px;
-    background: var(--gold);
-  }
-  .mes-val {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--dark);
-    text-align: right;
-  }
-  .mes-val.peak { color: var(--gold); }
+  .mes-label { font-size: 12px; color: var(--muted); }
+  .mes-track { height: 1px; background: var(--border); position: relative; }
+  .mes-fill { position: absolute; top: -1px; left: 0; height: 3px; background: var(--primary); }
+  .mes-val { font-size: 13px; font-weight: 500; color: #1A2B24; text-align: right; }
+  .mes-val.peak { color: var(--primary); }
 
-  /* DocFounder strip */
+  /* DOCFOUNDER STRIP */
   .df-strip {
-    margin-top: 56px;
-    background: var(--dark);
-    padding: 28px 36px;
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr;
-    gap: 36px;
-    align-items: center;
+    margin-top: 56px; background: var(--dark); padding: 28px 36px;
+    display: grid; grid-template-columns: 1fr 1px 1fr; gap: 36px; align-items: center;
   }
-  .df-divider { background: #2A2624; }
+  .df-divider { background: #243D34; }
   .df-eyebrow {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #4A4540;
-    margin-bottom: 6px;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #4A6058; margin-bottom: 6px;
   }
-  .df-value {
-    font-size: 14px;
-    color: #B0AB A5;
-    color: #A0A0A0;
-    line-height: 1.5;
-  }
+  .df-value { font-size: 14px; color: #9AADA7; line-height: 1.5; }
 
-  /* ─── ROADMAP ────────────────────────────────── */
+  /* ROADMAP */
   .roadmap-wrap {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--border);
+    display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border);
   }
   .fase {
-    padding: 32px 32px 0 0;
-    border-right: 1px solid var(--border);
-    margin-right: 0;
+    padding: 32px 32px 0 0; border-right: 1px solid var(--border);
   }
   .fase:last-child { border-right: none; padding-right: 0; }
   .fase:not(:first-child) { padding-left: 32px; }
   .fase-eyebrow {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
   }
   .fase-period {
     font-family: 'DM Serif Display', serif;
-    font-size: 18px;
-    color: var(--dark);
-    margin-bottom: 24px;
-    line-height: 1.3;
+    font-size: 18px; color: #1A2B24; margin-bottom: 24px; line-height: 1.3;
   }
-  .fase-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  .fase-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .fase-list li {
-    font-size: 13px;
-    color: var(--mid);
-    line-height: 1.45;
-    padding-left: 14px;
-    position: relative;
+    font-size: 13px; color: var(--mid); line-height: 1.45;
+    padding-left: 14px; position: relative;
   }
   .fase-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 5px;
-    height: 1px;
-    background: var(--border);
+    content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 1px; background: var(--border);
   }
 
-  /* Critérios MVP */
+  /* CRITÉRIOS */
   .criterios-wrap {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 56px;
-    border-top: 2px solid var(--dark);
-    padding-top: 36px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    margin-top: 56px; border-top: 2px solid #1A2B24; padding-top: 36px;
   }
-  .criterio {
-    padding-right: 32px;
-    border-right: 1px solid var(--border);
-    margin-right: 0;
-  }
+  .criterio { padding-right: 32px; border-right: 1px solid var(--border); }
   .criterio:last-child { border-right: none; padding-right: 0; }
   .criterio:not(:first-child) { padding-left: 32px; }
   .criterio-eyebrow {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 10px;
+    font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
   }
   .criterio-val {
     font-family: 'DM Serif Display', serif;
-    font-size: 44px;
-    color: var(--dark);
-    line-height: 1;
-    margin-bottom: 8px;
+    font-size: 44px; color: #1A2B24; line-height: 1; margin-bottom: 8px;
   }
-  .criterio-desc {
-    font-size: 13px;
-    color: var(--mid);
-    line-height: 1.4;
-  }
+  .criterio-desc { font-size: 13px; color: var(--mid); line-height: 1.4; }
 
-  /* ─── INVENTÁRIO ─────────────────────────────── */
-  .inv-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-  }
+  /* INVENTÁRIO */
+  .inv-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
   .inv-group-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border);
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
   }
-  .inv-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
+  .inv-list { list-style: none; display: flex; flex-direction: column; }
   .inv-list li {
-    font-size: 14px;
-    color: var(--mid);
-    padding: 13px 0;
+    font-size: 14px; color: var(--mid); padding: 13px 0;
     border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    line-height: 1.45;
+    display: flex; align-items: baseline; gap: 14px; line-height: 1.45;
   }
-  .mark-done {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #567A58;
-    flex-shrink: 0;
-  }
-  .mark-pend {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--gold);
-    flex-shrink: 0;
-  }
+  .mark-done { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--forest); flex-shrink: 0; }
+  .mark-pend { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--primary); flex-shrink: 0; }
 
   .olf-block {
-    margin-top: 52px;
-    padding: 32px 36px;
-    border: 1px solid #D4B06A;
-    background: var(--gold-light);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 40px;
-    align-items: start;
+    margin-top: 52px; padding: 32px 36px;
+    border: 1px solid #C9A87A; background: var(--primary-lt);
+    display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: start;
   }
   .olf-block-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    white-space: nowrap;
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--primary);
+    writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap;
   }
-  .olf-block-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
+  .olf-block-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .olf-block-item {
-    background: white;
-    padding: 16px 18px;
-    border: 1px solid #E8D9A8;
-    font-size: 13px;
-    color: var(--mid);
-    line-height: 1.4;
+    background: white; padding: 16px 18px;
+    border: 1px solid #E8D9A8; font-size: 13px; color: var(--mid); line-height: 1.4;
   }
   .olf-block-item-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 4px;
+    font-size: 10px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--primary); margin-bottom: 4px;
   }
 
-  /* ─── DECISÕES ───────────────────────────────── */
-  .decisoes-wrap {
-    display: flex;
-    flex-direction: column;
-  }
+  /* DECISÕES */
+  .decisoes-wrap { display: flex; flex-direction: column; }
   .decisao {
-    display: grid;
-    grid-template-columns: 1fr 160px 200px;
-    gap: 32px;
-    align-items: baseline;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border);
+    display: grid; grid-template-columns: 1fr 160px 200px; gap: 32px;
+    align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--border);
   }
   .decisao:first-child { padding-top: 0; }
-  .decisao-text {
-    font-size: 15px;
-    color: var(--dark);
-  }
-  .decisao-owner {
-    font-size: 12px;
-    color: var(--muted);
-    font-style: italic;
-  }
-  .decisao-impact {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.45;
-    text-align: right;
-  }
+  .decisao-text { font-size: 15px; color: #1A2B24; }
+  .decisao-owner { font-size: 12px; color: var(--muted); font-style: italic; }
+  .decisao-impact { font-size: 12px; color: var(--muted); max-width: 240px; text-align: right; line-height: 1.45; }
 
-  /* ─── AÇÕES ──────────────────────────────────── */
-  .acoes-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-  }
+  /* AÇÕES */
+  .acoes-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
   .acoes-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--dark);
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #1A2B24;
   }
-  .acao {
-    display: flex;
-    gap: 20px;
-    align-items: baseline;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .acao { display: flex; gap: 20px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--border); }
   .acao-n {
     font-family: 'DM Serif Display', serif;
-    font-size: 22px;
-    color: var(--border);
-    line-height: 1;
-    flex-shrink: 0;
+    font-size: 22px; color: var(--border); line-height: 1; flex-shrink: 0;
   }
-  .acao-text {
-    font-size: 14px;
-    color: var(--mid);
-    line-height: 1.5;
-  }
+  .acao-text { font-size: 14px; color: var(--mid); line-height: 1.5; }
 
-  /* ─── FOOTER ─────────────────────────────────── */
+  /* FOOTER */
   .footer {
-    background: var(--dark);
-    padding: 40px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: var(--dark); padding: 40px 80px;
+    display: flex; justify-content: space-between; align-items: center;
   }
   .footer-brand {
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    color: #F7F4EE;
-    font-style: italic;
+    font-family: 'DM Serif Display', serif; font-size: 20px; color: #F4F2F0; font-style: italic;
   }
-  .footer-info {
-    font-size: 12px;
-    color: #4A4540;
-    text-align: right;
-    line-height: 1.6;
-  }
+  .footer-info { font-size: 12px; color: #4A6058; text-align: right; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -739,7 +405,7 @@
 <div class="header">
   <div class="header-eyebrow">Documento Estratégico Confidencial</div>
   <h1>Elite Operacional</h1>
-  <div class="header-sub">Esboço do Projeto — MVP em Estruturação</div>
+  <div class="header-sub">Esboço do Projeto | MVP em Estruturação</div>
   <div class="header-meta">
     <div class="header-meta-item"><strong>Lucyanne Cruz</strong> + Roberta Salgado</div>
     <div class="header-meta-item">Otimiza+</div>
@@ -773,14 +439,14 @@
       <div class="program">
         <div class="program-eyebrow">Para clínicas</div>
         <div class="program-title">Operações de<br>Alto Impacto</div>
-        <div class="program-ticket">R$8.000 – R$15.000 por projeto</div>
+        <div class="program-ticket">R$8.000 a R$15.000 por projeto</div>
         <ul class="program-list">
           <li>Recrutamento estruturado com critérios objetivos</li>
-          <li>Onboarding 30-60-90 dias por função</li>
-          <li>Desenvolvimento individual — diagnóstico de aprendizagem por colaboradora</li>
-          <li>Gestão da evolução — médico fora do operacional</li>
-          <li>12 semanas de implementação + 90 dias de suporte</li>
-          <li>Sessão de resultados no dia 85 — case, depoimento, indicação</li>
+          <li>Onboarding 30, 60 e 90 dias por função</li>
+          <li>Desenvolvimento individual com diagnóstico de aprendizagem por colaboradora</li>
+          <li>Gestão da evolução para libertar o médico do operacional</li>
+          <li>12 semanas de implementação com 90 dias de suporte</li>
+          <li>Sessão de resultados no dia 85: case, depoimento e indicação</li>
         </ul>
       </div>
 
@@ -792,10 +458,10 @@
       <div class="program">
         <div class="program-eyebrow">Para profissionais</div>
         <div class="program-title">Formação<br>Profissionais de Elite</div>
-        <div class="program-ticket">R$1.800 – R$4.200 por aluno</div>
+        <div class="program-ticket">R$1.800 a R$4.200 por aluno</div>
         <ul class="program-list">
-          <li>Diagnóstico de perfil de aprendizagem — Módulo 0</li>
-          <li>Formação 8 semanas com jornada individualizada</li>
+          <li>Diagnóstico de perfil de aprendizagem no Módulo 0</li>
+          <li>Formação de 8 semanas com jornada individualizada</li>
           <li>Soft skills contextualizadas para clínicas de alto ticket</li>
           <li>Certificação verificável com código único</li>
           <li>Inserção na rede de clínicas parceiras</li>
@@ -809,7 +475,7 @@
   <!-- FRENTES ATIVAS -->
   <div class="section">
     <div class="section-header">
-      <span class="section-label">Frentes ativas — junho 2026</span>
+      <span class="section-label">Frentes ativas | junho 2026</span>
       <div class="section-rule"></div>
     </div>
     <div class="frentes-wrap">
@@ -818,20 +484,16 @@
         <div class="frente-num">01</div>
         <div>
           <div class="frente-status ativa">Em andamento</div>
-          <div class="frente-name">OLF — DocFounder</div>
-          <div class="frente-desc">Parceria fechada com Thiago. Produzindo os 3 materiais que travam o lançamento do produto digital. Prazo: 40 dias para o curso ir ao ar.</div>
+          <div class="frente-name">OLF DocFounder</div>
+          <div class="frente-desc">Parceria fechada com Thiago. Conteúdo já está pronto: 31 vídeos organizados em 7 módulos. O trabalho agora é estruturar a trilha pedagógica e preparar o lançamento do produto digital. Prazo de 40 dias.</div>
           <div class="frente-details">
             <div class="frente-detail-item">
-              <strong>Materiais em produção</strong>
+              <strong>O que está sendo organizado</strong>
               <div class="olf-chips">
-                <span class="olf-chip">Script de Agendamento</span>
-                <span class="olf-chip">Planilha de Métricas</span>
-                <span class="olf-chip">Checklist de Atendimento</span>
+                <span class="olf-chip">Estrutura da trilha</span>
+                <span class="olf-chip">Materiais de apoio</span>
+                <span class="olf-chip">Plataforma de entrega</span>
               </div>
-            </div>
-            <div class="frente-detail-item">
-              <strong>Receita</strong>
-              40% Otimiza+ do produto digital
             </div>
           </div>
         </div>
@@ -841,20 +503,16 @@
         <div class="frente-num">02</div>
         <div>
           <div class="frente-status proposta">Proposta aberta</div>
-          <div class="frente-name">Especialista de Equipe — DocFounder</div>
-          <div class="frente-desc">Lu como especialista do lado da equipe dentro da entrega da consultoria DocFounder. Modelo "faz junto" — sessões individuais semanais com cada secretária. Thiago validou a oportunidade; aguardando estruturação da proposta formal.</div>
+          <div class="frente-name">Especialista de Equipe na DocFounder</div>
+          <div class="frente-desc">Camada de desenvolvimento individual dentro da entrega da consultoria DocFounder. Sessões semanais com cada secretária para transformar o que o OLF ensina em mudança real de comportamento. Thiago validou a oportunidade.</div>
           <div class="frente-details">
             <div class="frente-detail-item">
               <strong>Formato</strong>
-              Sessões individuais semanais — 30 a 45 min por secretária
+              Sessões individuais semanais de 30 a 45 min por secretária
             </div>
             <div class="frente-detail-item">
               <strong>Receita estimada</strong>
-              R$2.200 – R$3.500 / mês por clínica · 70% Otimiza+
-            </div>
-            <div class="frente-detail-item">
-              <strong>Próximo passo</strong>
-              Enviar proposta de parceria
+              R$2.200 a R$3.500 por mês por clínica
             </div>
           </div>
         </div>
@@ -865,11 +523,11 @@
         <div>
           <div class="frente-status confirmada">Parceira confirmada</div>
           <div class="frente-name">Roberta Salgado</div>
-          <div class="frente-desc">Validou o modelo em conversa de 80 minutos (19/06). Insight central da sessão: "Tem que vender a implementação, não o curso." Confirmada como parceira do Elite Operacional — não consultora, não advisor.</div>
+          <div class="frente-desc">Validou o modelo em conversa de 80 minutos (19/06). Insight central da sessão: "Tem que vender a implementação, não o curso." Confirmada como parceira do Elite Operacional.</div>
           <div class="frente-details">
             <div class="frente-detail-item">
               <strong>Próximo passo</strong>
-              Sessão de trabalho — divisão de responsabilidades operacionais
+              Sessão de trabalho para definir divisão de responsabilidades operacionais
             </div>
           </div>
         </div>
@@ -890,31 +548,31 @@
         <div class="camadas">
           <div class="camada">
             <div class="camada-n">1</div>
-            <div class="camada-name">Call de discovery — qualificação e mapeamento</div>
+            <div class="camada-name">Call de discovery: qualificação e mapeamento da dor</div>
             <div class="camada-value gratuita">Gratuita</div>
           </div>
           <div class="camada">
             <div class="camada-n">2</div>
             <div class="camada-name">Operações de Alto Impacto</div>
-            <div class="camada-value">R$8k – R$15k</div>
+            <div class="camada-value">R$8k a R$15k</div>
           </div>
           <div class="camada">
             <div class="camada-n">3</div>
             <div class="camada-name">Manutenção pós-programa</div>
-            <div class="camada-value">R$1,5k – R$3,5k/mês</div>
+            <div class="camada-value">R$1,5k a R$3,5k por mês</div>
           </div>
           <div class="camada">
             <div class="camada-n">4</div>
             <div class="camada-name">Formação Profissionais de Elite</div>
-            <div class="camada-value">R$1,8k – R$4,2k/aluno</div>
+            <div class="camada-value">R$1,8k a R$4,2k por aluno</div>
           </div>
           <div class="camada">
             <div class="camada-n">5</div>
             <div class="camada-name">Recrutamento para clínicas parceiras</div>
-            <div class="camada-value">R$1,5k – R$3k/alocação</div>
+            <div class="camada-value">R$1,5k a R$3k por alocação</div>
           </div>
         </div>
-        <p class="principio-note">Diagnóstico não é produto. O cliente paga uma vez e começa a ver mudança já na primeira sessão — não recebe um relatório.</p>
+        <p class="principio-note">Diagnóstico não é produto. O cliente paga uma vez e começa a ver mudança na primeira sessão paga.</p>
       </div>
 
       <div>
@@ -922,36 +580,12 @@
         <div class="projecao-total">R$270k</div>
         <div class="projecao-periodo">em 6 meses de operação</div>
         <div class="meses">
-          <div class="mes">
-            <span class="mes-label">Mês 1</span>
-            <div class="mes-track"><div class="mes-fill" style="width:6%"></div></div>
-            <span class="mes-val">R$5k</span>
-          </div>
-          <div class="mes">
-            <span class="mes-label">Mês 2</span>
-            <div class="mes-track"><div class="mes-fill" style="width:17%"></div></div>
-            <span class="mes-val">R$15k</span>
-          </div>
-          <div class="mes">
-            <span class="mes-label">Mês 3</span>
-            <div class="mes-track"><div class="mes-fill" style="width:76%"></div></div>
-            <span class="mes-val peak">R$65k</span>
-          </div>
-          <div class="mes">
-            <span class="mes-label">Mês 4</span>
-            <div class="mes-track"><div class="mes-fill" style="width:47%"></div></div>
-            <span class="mes-val">R$40k</span>
-          </div>
-          <div class="mes">
-            <span class="mes-label">Mês 5</span>
-            <div class="mes-track"><div class="mes-fill" style="width:100%"></div></div>
-            <span class="mes-val peak">R$85k</span>
-          </div>
-          <div class="mes">
-            <span class="mes-label">Mês 6</span>
-            <div class="mes-track"><div class="mes-fill" style="width:70%"></div></div>
-            <span class="mes-val">R$60k</span>
-          </div>
+          <div class="mes"><span class="mes-label">Mês 1</span><div class="mes-track"><div class="mes-fill" style="width:6%"></div></div><span class="mes-val">R$5k</span></div>
+          <div class="mes"><span class="mes-label">Mês 2</span><div class="mes-track"><div class="mes-fill" style="width:17%"></div></div><span class="mes-val">R$15k</span></div>
+          <div class="mes"><span class="mes-label">Mês 3</span><div class="mes-track"><div class="mes-fill" style="width:76%"></div></div><span class="mes-val peak">R$65k</span></div>
+          <div class="mes"><span class="mes-label">Mês 4</span><div class="mes-track"><div class="mes-fill" style="width:47%"></div></div><span class="mes-val">R$40k</span></div>
+          <div class="mes"><span class="mes-label">Mês 5</span><div class="mes-track"><div class="mes-fill" style="width:100%"></div></div><span class="mes-val peak">R$85k</span></div>
+          <div class="mes"><span class="mes-label">Mês 6</span><div class="mes-track"><div class="mes-fill" style="width:70%"></div></div><span class="mes-val">R$60k</span></div>
         </div>
       </div>
 
@@ -959,13 +593,13 @@
 
     <div class="df-strip">
       <div>
-        <div class="df-eyebrow">DocFounder — OLF (ativo)</div>
-        <div class="df-value">40% da receita do produto digital · lançamento em 40 dias</div>
+        <div class="df-eyebrow">DocFounder / OLF (ativo)</div>
+        <div class="df-value">Participação na receita do produto digital · lançamento em 40 dias</div>
       </div>
       <div class="df-divider"></div>
       <div>
-        <div class="df-eyebrow">DocFounder — Implementação (proposta aberta)</div>
-        <div class="df-value">70% de R$2.200 – R$3.500 / mês por clínica ativa</div>
+        <div class="df-eyebrow">DocFounder / Implementação (proposta aberta)</div>
+        <div class="df-value">R$2.200 a R$3.500 por mês por clínica ativa na carteira</div>
       </div>
     </div>
   </div>
@@ -979,9 +613,9 @@
     <div class="roadmap-wrap">
       <div class="fase">
         <div class="fase-eyebrow">Fase 0</div>
-        <div class="fase-period">Agora —<br>Jun 2026</div>
+        <div class="fase-period">Agora<br>Jun 2026</div>
         <ul class="fase-list">
-          <li>OLF no ar (40 dias)</li>
+          <li>OLF no ar em 40 dias</li>
           <li>Proposta DocFounder enviada</li>
           <li>Sessão de trabalho com Roberta</li>
           <li>Primeiras entrevistas com clínicas</li>
@@ -989,7 +623,7 @@
       </div>
       <div class="fase">
         <div class="fase-eyebrow">Fase 1</div>
-        <div class="fase-period">Jul – Ago<br>2026</div>
+        <div class="fase-period">Jul e Ago<br>2026</div>
         <ul class="fase-list">
           <li>Primeiro cliente ativo</li>
           <li>Implementação dos 4 pilares</li>
@@ -998,19 +632,19 @@
       </div>
       <div class="fase">
         <div class="fase-eyebrow">Fase 2</div>
-        <div class="fase-period">Ago – Set<br>2026</div>
+        <div class="fase-period">Ago e Set<br>2026</div>
         <ul class="fase-list">
-          <li>1ª turma Formação (20–30 alunos)</li>
+          <li>1ª turma da Formação (20 a 30 alunos)</li>
           <li>Primeiras alocações na rede</li>
           <li>Flywheel iniciando</li>
         </ul>
       </div>
       <div class="fase">
         <div class="fase-eyebrow">Fase 3</div>
-        <div class="fase-period">Out – Dez<br>2026</div>
+        <div class="fase-period">Out a Dez<br>2026</div>
         <ul class="fase-list">
           <li>10 clínicas ativas</li>
-          <li>2 turmas (100+ alunos)</li>
+          <li>2 turmas (100 alunos ou mais)</li>
           <li>Receita recorrente consolidada</li>
           <li>Flywheel ativo</li>
         </ul>
@@ -1025,8 +659,8 @@
       </div>
       <div class="criterio">
         <div class="criterio-eyebrow">Critério MVP</div>
-        <div class="criterio-val">≥ 8</div>
-        <div class="criterio-desc">NPS das clínicas ativas</div>
+        <div class="criterio-val">8+</div>
+        <div class="criterio-desc">NPS médio das clínicas ativas</div>
       </div>
       <div class="criterio">
         <div class="criterio-eyebrow">Critério MVP</div>
@@ -1052,15 +686,15 @@
       <div>
         <div class="inv-group-title">Pesquisa e produto</div>
         <ul class="inv-list">
-          <li><span class="mark-done">OK</span>Roteiros de entrevista — clínicas e profissionais</li>
+          <li><span class="mark-done">OK</span>Roteiros de entrevista: clínicas e profissionais</li>
           <li><span class="mark-done">OK</span>Pesquisa de mercado secundária</li>
-          <li><span class="mark-done">OK</span>Mapeamento de dores — 8 clínicas + 7 profissionais</li>
-          <li><span class="mark-done">OK</span>Sinergia entre públicos + TAM / SAM / SOM</li>
-          <li><span class="mark-done">OK</span>Definição do MVP — escopo, hipótese, critérios</li>
+          <li><span class="mark-done">OK</span>Mapeamento de dores: 8 clínicas e 7 profissionais</li>
+          <li><span class="mark-done">OK</span>Sinergia entre públicos com TAM, SAM e SOM</li>
+          <li><span class="mark-done">OK</span>Definição do MVP: escopo, hipótese e critérios</li>
           <li><span class="mark-done">OK</span>Programa Operações de Alto Impacto (4 pilares)</li>
           <li><span class="mark-done">OK</span>Programa Formação Profissionais de Elite (8 módulos)</li>
-          <li><span class="mark-done">OK</span>Jornada do cliente — ambos os públicos</li>
-          <li><span class="mark-done">OK</span>Métricas e KPIs + plano de implementação 6 meses</li>
+          <li><span class="mark-done">OK</span>Jornada do cliente para ambos os públicos</li>
+          <li><span class="mark-done">OK</span>Métricas, KPIs e plano de implementação 6 meses</li>
         </ul>
       </div>
 
@@ -1068,32 +702,32 @@
         <div class="inv-group-title">Materiais comerciais e conteúdo</div>
         <ul class="inv-list">
           <li><span class="mark-done">OK</span>Documento executivo V1</li>
-          <li><span class="mark-done">OK</span>1-pager clínicas + 1-pager profissionais</li>
-          <li><span class="mark-done">OK</span>Proposta DocFounder — especialista de equipe V2</li>
-          <li><span class="mark-done">OK</span>Deck clínicas (14 slides) + Deck profissionais (13 slides)</li>
-          <li><span class="mark-done">OK</span>Guia gratuito — clínicas + Guia gratuito — profissionais</li>
-          <li><span class="mark-done">OK</span>Template avaliação de performance + Template PDI</li>
-          <li><span class="mark-done">OK</span>5 posts clínicas + 5 posts profissionais</li>
-          <li><span class="mark-done">OK</span>Template entrevista recrutamento + Template onboarding</li>
+          <li><span class="mark-done">OK</span>1-pager clínicas e 1-pager profissionais</li>
+          <li><span class="mark-done">OK</span>Proposta DocFounder: especialista de equipe V2</li>
+          <li><span class="mark-done">OK</span>Deck clínicas (14 slides) e Deck profissionais (13 slides)</li>
+          <li><span class="mark-done">OK</span>Guia gratuito clínicas e Guia gratuito profissionais</li>
+          <li><span class="mark-done">OK</span>Template avaliação de performance e Template PDI</li>
+          <li><span class="mark-done">OK</span>5 posts clínicas e 5 posts profissionais</li>
+          <li><span class="mark-done">OK</span>Template entrevista recrutamento e Template onboarding</li>
         </ul>
       </div>
 
     </div>
 
     <div class="olf-block">
-      <div class="olf-block-label">OLF — Em produção</div>
+      <div class="olf-block-label">OLF em organização</div>
       <div class="olf-block-items">
         <div class="olf-block-item">
-          <div class="olf-block-item-label">Em produção</div>
-          Script de Agendamento — PDF visual para o atendimento
+          <div class="olf-block-item-label">A estruturar</div>
+          Trilha pedagógica: sequência dos 31 vídeos em 7 módulos
         </div>
         <div class="olf-block-item">
-          <div class="olf-block-item-label">Em produção</div>
-          Planilha de Métricas — Google Sheets com indicadores
+          <div class="olf-block-item-label">A estruturar</div>
+          Materiais de apoio: organização dos documentos existentes por módulo
         </div>
         <div class="olf-block-item">
-          <div class="olf-block-item-label">Em produção</div>
-          Checklist de Atendimento — PDF visual por turno
+          <div class="olf-block-item-label">A definir</div>
+          Plataforma de entrega e configuração do ambiente do aluno
         </div>
       </div>
     </div>
@@ -1112,17 +746,17 @@
         <div class="decisao-impact">Abre a carteira DocFounder como canal imediato de clínicas</div>
       </div>
       <div class="decisao">
-        <div class="decisao-text">Plataforma para a turma de profissionais — Hotmart, Kiwify ou outra</div>
+        <div class="decisao-text">Plataforma para a turma de profissionais: Hotmart, Kiwify ou outra</div>
         <div class="decisao-owner">Lu + Roberta</div>
         <div class="decisao-impact">Define experiência do aluno e percentual retido pela plataforma</div>
       </div>
       <div class="decisao">
         <div class="decisao-text">Preço de lançamento do OLF</div>
         <div class="decisao-owner">Thiago decide</div>
-        <div class="decisao-impact">Produto é da DocFounder — decisão exclusiva dele</div>
+        <div class="decisao-impact">Produto é da DocFounder: decisão exclusiva dele</div>
       </div>
       <div class="decisao">
-        <div class="decisao-text">Primeira clínica piloto — quem é, quando começa</div>
+        <div class="decisao-text">Primeira clínica piloto: quem é, quando começa</div>
         <div class="decisao-owner">Lu + Roberta</div>
         <div class="decisao-impact">Gera o primeiro case real do programa</div>
       </div>
@@ -1140,22 +774,22 @@
         <div class="acoes-title">Esta semana</div>
         <div class="acao">
           <div class="acao-n">1</div>
-          <div class="acao-text">Entregar proposta de parceria para Thiago — posicionar o Elite Operacional como camada de implementação dentro do ecossistema DocFounder</div>
+          <div class="acao-text">Entregar proposta para Thiago: posicionar o Elite Operacional como camada de implementação no ecossistema DocFounder</div>
         </div>
         <div class="acao">
           <div class="acao-n">2</div>
-          <div class="acao-text">Sessão com Roberta — definir divisão de responsabilidades operacionais e comerciais entre as duas</div>
+          <div class="acao-text">Sessão com Roberta para definir divisão de responsabilidades operacionais e comerciais</div>
         </div>
         <div class="acao">
           <div class="acao-n">3</div>
-          <div class="acao-text">Concluir os 3 materiais OLF (script, planilha, checklist) antes de iniciar a proposta de parceria</div>
+          <div class="acao-text">Estruturar a trilha pedagógica do OLF e definir a plataforma de entrega</div>
         </div>
       </div>
       <div>
-        <div class="acoes-title">Próximas 2 – 4 semanas</div>
+        <div class="acoes-title">Próximas 2 a 4 semanas</div>
         <div class="acao">
           <div class="acao-n">4</div>
-          <div class="acao-text">Primeiras entrevistas de validação com clínicas e profissionais — confirmar dores e testar posicionamento</div>
+          <div class="acao-text">Primeiras entrevistas de validação com clínicas e profissionais para confirmar dores e testar posicionamento</div>
         </div>
         <div class="acao">
           <div class="acao-n">5</div>
